@@ -31,6 +31,14 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RCTL)>;
         };
+        cw_togg: cw_togg {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CW_TOGG";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LSHFT>,
+                <&kp LSHFT>;
+        };
     };
 
     conditional_layers {
@@ -75,10 +83,10 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp F        &kp P      &kp G    &kp J        &kp L      &kp U      &kp Y    &kp SINGLE_QUOTE
-&kp A  &kp R  &mt LCTRL S  &kp T      &kp D    &kp H        &kp N      &kp E      &kp I    &kp O
-&kp Z  &kp X  &kp C        &kp V      &kp B    &kp K        &kp M      &kp COMMA  &kp DOT  &kp FSLH
-                           &sk LCTRL  &sl 1    &lt 3 SPACE  &sk LSHFT
+&kp Q  &kp W  &kp F        &kp P      &kp G    &kp J        &kp L     &kp U      &kp Y    &kp SINGLE_QUOTE
+&kp A  &kp R  &mt LCTRL S  &kp T      &kp D    &kp H        &kp N     &kp E      &kp I    &kp O
+&kp Z  &kp X  &kp C        &kp V      &kp B    &kp K        &kp M     &kp COMMA  &kp DOT  &kp FSLH
+                           &sk LCTRL  &sl 1    &lt 3 SPACE  &cw_togg
             >;
         };
 
