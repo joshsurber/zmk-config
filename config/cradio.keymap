@@ -25,11 +25,6 @@
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
-
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
     };
 
     keymap {
@@ -46,10 +41,10 @@
 
         sym {
             bindings = <
-&kp EXCL    &kp AT    &kp HASH   &kp DLLR   &kp LS(PRCNT)    &kp CARET  &kp AMPS   &kp ASTERISK  &kp MINUS  &kp EQUAL
-&kp LALT    &kp LGUI  &kp LCTRL  &kp LSHFT  &trans           &kp LARW   &kp ENTER  &kp TAB       &kp ESC    &kp BSPC
-&caps_word  &kp N7    &kp N8     &kp N9     &kp N0           &trans     &trans     &trans        &kp SEMI   &trans
-                                 &trans     &to 3            &to 0      &trans
+&kp EXCL   &kp AT     &kp HASH   &kp DLLR      &kp LS(PRCNT)    &kp CARET  &kp AMPS   &kp ASTERISK  &kp MINUS  &kp EQUAL
+&kp LALT   &kp LGUI   &kp LCTRL  &kp LSHFT     &kp PIPE         &kp SEMI   &kp ENTER  &kp TAB       &kp ESC    &kp BSPC
+&kp TILDE  &kp GRAVE  &kp LBRC   &kp LS(LPAR)  &kp LBKT         &kp RBKT   &kp RPAR   &kp RBRC      &kp SEMI   &kp BSLH
+                                 &trans        &to 3            &to 0      &trans
             >;
         };
 
