@@ -33,25 +33,25 @@
         esc {
             bindings = <&kp ESC>;
             key-positions = <1 2>;
-            layers = <0 1 2 3>;
+            layers = <>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <21 22>;
-            layers = <0 1 2 3>;
+            layers = <>;
         };
 
         bksp {
             bindings = <&kp BSPC>;
             key-positions = <7 8>;
-            layers = <0 2 1 3>;
+            layers = <>;
         };
 
         ent {
             bindings = <&kp ENTER>;
             key-positions = <27 28>;
-            layers = <0 1 2 3>;
+            layers = <>;
         };
     };
 
