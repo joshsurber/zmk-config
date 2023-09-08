@@ -16,25 +16,24 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
             bindings =
                 <&kp>,
                 <&kp>;
         };
-        bksp_del: bksp_del {
+        bksp_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
-            label = "BKSP_DEL";
+            label = "BACKSPACE_DELETE";
             bindings =
                 <&kp BACKSPACE>,
-                <&kp DEL>;
+                <&kp DEL>,
+                <&none>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RCTL)>;
+            mods = <(MOD_LSFT)>;
         };
-        sh_cw: sh_cw {
+        sh_cw: shift_caps_word {
             compatible = "zmk,behavior-tap-dance";
-            label = "SH_CW";
+            label = "SHIFT_CAPS_WORD";
             #binding-cells = <0>;
             bindings =
                 <&sk LSHFT>,
@@ -84,19 +83,19 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp F        &kp P      &kp G    &kp J        &kp L   &kp U      &kp Y    &kp SINGLE_QUOTE
-&kp A  &kp R  &mt LCTRL S  &kp T      &kp D    &kp H        &kp N   &kp E      &kp I    &kp O
-&kp Z  &kp X  &kp C        &kp V      &kp B    &kp K        &kp M   &kp COMMA  &kp DOT  &kp FSLH
-                           &sk LCTRL  &sl 1    &lt 3 SPACE  &sh_cw
+&kp Q       &kp W       &kp F        &kp P        &kp G    &kp J        &kp L        &kp U        &kp Y       &kp SINGLE_QUOTE
+&ht LALT A  &ht LGUI R  &ht LCTRL S  &ht LSHFT T  &kp D    &kp H        &ht LSHFT N  &ht LCTRL E  &ht LGUI I  &ht LALT O
+&kp Z       &kp X       &kp C        &kp V        &kp B    &kp K        &kp M        &kp COMMA    &kp DOT     &kp FSLH
+                                     &key_repeat  &sl 1    &lt 3 SPACE  &sh_cw
             >;
         };
 
         sym {
             bindings = <
-&kp EXCL   &kp AT     &kp HASH   &kp DLLR      &kp PERCENT    &kp CARET  &kp AMPS     &kp ASTERISK  &kp MINUS  &kp EQUAL
-&sk LALT   &sk LGUI   &sk LCTRL  &sk LSHFT     &caps_word     &kp SEMI   &kp ENTER    &kp TAB       &kp ESC    &bksp_del
-&kp TILDE  &kp GRAVE  &kp LBRC   &kp LS(LPAR)  &kp LBKT       &kp RBKT   &kp RPAR     &kp RBRC      &kp SEMI   &kp BSLH
-                                 &caps_word    &to 2          &to 0      &key_repeat
+&kp EXCL   &kp AT     &kp HASH   &kp DLLR    &kp PERCENT    &kp CARET  &kp AMPS     &kp ASTERISK  &ht MINUS UNDER  &ht EQUAL PLUS
+&sk LALT   &sk LGUI   &sk LCTRL  &sk LSHFT   &caps_word     &kp SEMI   &kp ENTER    &kp TAB       &kp ESC          &bksp_del
+&kp TILDE  &kp GRAVE  &kp LBRC   &kp LPAR    &kp LBKT       &kp RBKT   &kp RPAR     &kp RBRC      &kp COLON        &ht BSLH PIPE
+                                 &caps_word  &to 2          &to 0      &key_repeat
             >;
         };
 
