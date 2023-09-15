@@ -96,10 +96,55 @@
 
         nav {
             bindings = <
-&kp PG_UP   &kp HOME   &kp UP      &kp END      &trans          &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp PSCRN
-&kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &caps_word      &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
-&kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &paste_enter    &enter_pw  &kp ENTER  &kp TAB    &kp ESC    &kp DEL
-                                   &trans       &to 0           &to 0      &trans
+&kp PG_UP   &kp HOME   &kp UP      &kp END      &trans          &trans  &trans     &trans     &trans    &trans
+&kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &caps_word      &trans  &kp LSHFT  &kp LCTRL  &kp LGUI  &kp LALT
+&kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &paste_enter    &trans  &trans     &trans     &trans    &trans
+                                   &trans       &trans          &trans  &trans
+            >;
+        };
+
+        mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
+            >;
+        };
+
+        media {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
+            >;
+        };
+
+        num {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
+            >;
+        };
+
+        sym {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
+            >;
+        };
+
+        fun {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
     };
