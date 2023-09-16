@@ -13,7 +13,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
+            tapping-term-ms = <250>;
             bindings =
                 <&kp>,
                 <&kp>;
@@ -49,6 +49,13 @@
         dash {
             bindings = <&kp MINUS>;
             key-positions = <32 33>;
+            layers = <4>;
+        };
+
+        under {
+            bindings = <&kp UNDER>;
+            key-positions = <32 33>;
+            layers = <5>;
         };
     };
 
@@ -72,19 +79,19 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W       &kp F        &kp P        &kp G    &kp J        &kp L        &kp U        &kp Y       &kp SINGLE_QUOTE
-&ht LALT A  &ht LGUI R  &ht LCTRL S  &ht LSHFT T  &kp D    &kp H        &ht LSHFT N  &ht LCTRL E  &ht LGUI I  &ht LALT O
-&kp Z       &kp X       &kp C        &kp V        &kp B    &kp K        &kp M        &kp COMMA    &kp DOT     &kp FSLH
-                                     &key_repeat  &sl 0    &lt 0 SPACE  &sh_cw
+&kp Q       &kp W       &kp F        &kp P        &kp G         &kp J        &kp L        &kp U        &kp Y       &kp SINGLE_QUOTE
+&ht LALT A  &ht LGUI R  &ht LCTRL S  &ht LSHFT T  &kp D         &kp H        &ht LSHFT N  &ht LCTRL E  &ht LGUI I  &ht LALT O
+&kp Z       &kp X       &kp C        &kp V        &kp B         &kp K        &kp M        &kp COMMA    &kp DOT     &kp FSLH
+                                     &lt 5 RET    &lt 4 BSPC    &lt 1 SPACE  &lt 3 TAB
             >;
         };
 
         nav {
             bindings = <
-&kp PG_UP   &kp HOME   &kp UP      &kp END      &kp INS         &none  &none      &none      &none     &none
-&kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &caps_word      &none  &kp LSHFT  &kp LCTRL  &kp LGUI  &kp LALT
-&kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &paste_enter    &none  &none      &none      &none     &none
-                                   &trans       &trans          &none  &none
+&kp PG_UP   &kp HOME   &kp UP      &kp END      &kp INS         &none       &none      &none      &none     &none
+&kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &caps_word      &caps_word  &kp LSHFT  &kp LCTRL  &kp LGUI  &kp LALT
+&kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &paste_enter    &none       &tog 1     &none      &none     &none
+                                   &trans       &trans          &none       &none
             >;
         };
 
@@ -108,10 +115,10 @@
 
         num {
             bindings = <
-&trans    &trans    &trans     &trans     &trans    &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
-&kp LALT  &kp LGUI  &kp LCTRL  &kp LSHFT  &trans    &kp EQUAL  &kp N4   &kp N5  &kp N6  &kp SEMI
-&trans    &trans    &trans     &trans     &trans    &kp BSLH   &kp N1   &kp N2  &kp N3  &kp GRAVE
-                               &trans     &trans    &kp N0     &kp DOT
+&trans    &trans    &trans     &trans     &trans        &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
+&kp LALT  &kp LGUI  &kp LCTRL  &kp LSHFT  &caps_word    &kp EQUAL  &kp N4   &kp N5  &kp N6  &kp SEMI
+&trans    &trans    &trans     &trans     &trans        &kp BSLH   &kp N1   &kp N2  &kp N3  &kp GRAVE
+                               &trans     &trans        &kp N0     &kp DOT
             >;
         };
 
