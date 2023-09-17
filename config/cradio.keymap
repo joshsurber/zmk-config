@@ -57,6 +57,17 @@
             key-positions = <32 33>;
             layers = <5>;
         };
+
+        del {
+            bindings = <&kp DEL>;
+            key-positions = <31 30>;
+            layers = <0 1>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <32 33>;
+        };
     };
 
     macros {
@@ -89,8 +100,8 @@
         nav {
             bindings = <
 &kp PG_UP   &kp HOME   &kp UP      &kp END      &kp INS         &none       &none      &none      &none     &none
-&kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &caps_word      &caps_word  &kp LSHFT  &kp LCTRL  &kp LGUI  &kp LALT
-&kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &paste_enter    &none       &tog 1     &none      &none     &none
+&kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &key_repeat     &caps_word  &kp LSHFT  &kp LCTRL  &kp LGUI  &kp LALT
+&kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &paste_enter    &none       &tog 1     &tog 4     &none     &none
                                    &trans       &trans          &none       &none
             >;
         };
@@ -143,9 +154,9 @@
         button {
             bindings = <
 &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO    &kp K_REDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_UNDO
-&kp LALT    &kp LGUI   &kp LCTRL   &kp LSHFT    &kp           &kp         &kp LSHFT    &kp LCTRL   &kp LGUI   &kp LALT
-&kp         &kp        &kp         &kp          &kp           &kp         &kp          &kp         &kp        &kp
-                                   &kp          &kp           &kp         &kp
+&kp LALT    &kp LGUI   &kp LCTRL   &kp LSHFT    &caps_word    &caps_word  &kp LSHFT    &kp LCTRL   &kp LGUI   &kp LALT
+&none       &none      &none       &none        &none         &none       &none        &none       &none      &none
+                                   &none        &none         &none       &none
             >;
         };
     };
