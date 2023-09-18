@@ -159,7 +159,7 @@
 &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &paste_enter    &paste_enter  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
 &kp LALT   &kp LGUI   &kp LCTRL  &kp LSHFT  &caps_word      &caps_word    &kp LSHFT  &kp LCTRL  &kp LGUI   &kp LALT
 &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &paste_enter    &paste_enter  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
-                                 &kp        &kp             &kp           &kp
+                                 &none      &none           &none         &none
             >;
         };
     };
