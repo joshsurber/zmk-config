@@ -56,18 +56,18 @@
             bindings = <&kp ESC>;
             key-positions = <32 33>;
         };
+
         dash {
             bindings = <&kp MINUS>;
             key-positions = <32 33>;
-            layers = <4>;
+            layers = <5>;
         };
 
         under {
             bindings = <&kp UNDER>;
             key-positions = <32 33>;
-            layers = <5>;
+            layers = <6>;
         };
-
     };
 
     macros {
@@ -99,45 +99,46 @@
 
         nav {
             bindings = <
-&kp PG_UP   &kp HOME   &kp UP      &kp END      &kp INS         &none       &none      &none      &none     &none
-&kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &key_repeat     &caps_word  &sk LSHFT  &sk LCTRL  &sk LGUI  &sk LALT
-&kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &paste_enter    &none       &tog 1     &tog 4     &none     &none
-                                   &trans       &trans          &none       &none
+&kp PG_UP  &kp HOME   &kp UP     &kp END    &kp INS         &enter_pw     &none      &none      &none      &none
+&kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &key_repeat     &caps_word    &sk LSHFT  &sk LCTRL  &sk LGUI   &sk LALT
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &paste_enter    &paste_enter  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
+                                 &trans     &trans          &none         &none
             >;
         };
 
         mouse {
             bindings = <
-&kp PG_UP   &kp HOME   &kp UP      &kp END      &kp INS         &none       &none      &none      &none     &none
-&kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &key_repeat     &trans      &sk LSHFT  &sk LCTRL  &sk LGUI  &sk LALT
-&kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &paste_enter    &none       &tog 1     &tog 4     &none     &none
-                                   &trans       &trans          &none       &none
+&kp PG_UP   &kp HOME   &kp UP      &kp END      &kp INS         &none   &none      &none      &none     &none
+&kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &key_repeat     &trans  &sk LSHFT  &sk LCTRL  &sk LGUI  &sk LALT
+&kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &paste_enter    &none   &tog 1     &tog 5     &none     &none
+                                   &trans       &trans          &none   &none
             >;
         };
 
         media {
             bindings = <
-&kp PG_UP   &kp HOME   &kp UP      &kp END      &kp INS         &none       &none      &none      &none     &none
-&kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &key_repeat     &trans      &sk LSHFT  &sk LCTRL  &sk LGUI  &sk LALT
-&kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &paste_enter    &none       &tog 1     &tog 4     &none     &none
-                                   &trans       &trans          &none       &none
+&kp PG_UP   &kp HOME   &kp UP      &kp END      &kp INS         &none   &none      &none      &none     &none
+&kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &key_repeat     &trans  &sk LSHFT  &sk LCTRL  &sk LGUI  &sk LALT
+&kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &paste_enter    &none   &tog 1     &tog 5     &none     &none
+                                   &trans       &trans          &none   &none
+            >;
         };
 
         num {
             bindings = <
-&trans    &trans    &trans     &trans     &trans        &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
-&sk LALT  &sk LGUI  &sk LCTRL  &sk LSHFT  &trans        &kp EQUAL  &kp N4   &kp N5  &kp N6  &kp SEMI
-&trans    &trans    &trans     &trans     &trans        &kp BSLH   &kp N1   &kp N2  &kp N3  &kp GRAVE
-                               &trans     &trans        &kp N0     &kp DOT
+&none      &none      &none      &none      &none           &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
+&sk LALT   &sk LGUI   &sk LCTRL  &sk LSHFT  &kp BSLH        &kp EQUAL  &kp N4   &kp N5  &kp N6  &kp SEMI
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &paste_enter    &kp MINUS  &kp N1   &kp N2  &kp N3  &kp GRAVE
+                                 &none      &none           &kp N0     &kp DOT
             >;
         };
 
         sym {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans  &trans
+&none     &none     &none      &none      &none       &kp LBRC   &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC
+&sk LALT  &sk LGUI  &sk LCTRL  &sk LSHFT  &kp PIPE    &kp PLUS   &kp DLLR  &kp PRCNT  &kp CARET  &kp COLON
+&none     &none     &none      &none      &none       &kp UNDER  &kp EXCL  &kp AT     &kp HASH   &kp TILDE
+                               &none      &none       &kp LPAR   &kp RPAR
             >;
         };
 
