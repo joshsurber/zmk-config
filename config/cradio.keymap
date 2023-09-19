@@ -102,25 +102,25 @@
 
         nav {
             bindings = <
-&kp PG_UP  &kp HOME   &kp UP     &kp END    &kp INS         &enter_pw     &none      &none      &none      &none
-&kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &caps_word      &key_repeat   &sk LSHFT  &sk LCTRL  &sk LGUI   &sk LALT
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &paste_enter    &paste_enter  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
+&kp PG_UP  &kp HOME   &kp UP     &kp END    &kp INS         &enter_pw     &none      &none      &bootloader  &sys_reset
+&kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &caps_word      &key_repeat   &sk LSHFT  &sk LCTRL  &sk LGUI     &sk LALT
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &paste_enter    &paste_enter  &kp LC(V)  &kp LC(C)  &kp LC(X)    &kp LC(Z)
                                  &trans     &trans          &none         &none
             >;
         };
 
         mouse {
             bindings = <
-&kp PG_UP   &kp HOME   &kp UP      &kp END      &kp INS         &none        &none      &none      &none     &none
-&kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &key_repeat     &key_repeat  &sk LSHFT  &sk LCTRL  &sk LGUI  &sk LALT
-&kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &paste_enter    &none        &tog 1     &tog 5     &none     &none
+&kp PG_UP   &kp HOME   &kp UP      &kp END      &kp INS         &none        &none      &none      &bootloader  &sys_reset
+&kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &key_repeat     &key_repeat  &sk LSHFT  &sk LCTRL  &sk LGUI     &sk LALT
+&kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &paste_enter    &none        &tog 1     &tog 5     &none        &none
                                    &trans       &trans          &none        &none
             >;
         };
 
         media {
             bindings = <
-&kp PG_UP  &kp HOME    &kp C_VOL_UP  &kp END     &kp INS         &none              &none         &none         &none         &none
+&kp PG_UP  &kp HOME    &kp C_VOL_UP  &kp END     &kp INS         &none              &none         &none         &bootloader   &sys_reset
 &kp PG_DN  &kp C_PREV  &kp C_VOL_DN  &kp C_NEXT  &key_repeat     &ext_power EP_TOG  &sk LSHFT     &sk LCTRL     &sk LGUI      &sk LALT
 &kp LC(Z)  &kp LC(X)   &kp LC(C)     &kp LC(V)   &paste_enter    &out OUT_TOG       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
                                      &trans      &trans          &none              &none
@@ -129,28 +129,28 @@
 
         num {
             bindings = <
-&none      &none      &none      &none      &none           &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
-&sk LALT   &sk LGUI   &sk LCTRL  &sk LSHFT  &kp BSLH        &kp EQUAL  &kp N4   &kp N5  &kp N6  &kp SEMI
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &paste_enter    &kp MINUS  &kp N1   &kp N2  &kp N3  &kp GRAVE
-                                 &none      &none           &kp N0     &kp DOT
+&sys_reset  &bootloader  &none      &none      &none           &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
+&sk LALT    &sk LGUI     &sk LCTRL  &sk LSHFT  &kp BSLH        &kp EQUAL  &kp N4   &kp N5  &kp N6  &kp SEMI
+&kp LC(Z)   &kp LC(X)    &kp LC(C)  &kp LC(V)  &paste_enter    &kp MINUS  &kp N1   &kp N2  &kp N3  &kp GRAVE
+                                    &none      &none           &kp N0     &kp DOT
             >;
         };
 
         sym {
             bindings = <
-&none      &none      &none      &none      &none           &kp LBRC   &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC
-&sk LALT   &sk LGUI   &sk LCTRL  &sk LSHFT  &kp PIPE        &kp PLUS   &kp DLLR  &kp PRCNT  &kp CARET  &kp COLON
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &paste_enter    &kp UNDER  &kp EXCL  &kp AT     &kp HASH   &kp TILDE
-                                 &none      &none           &kp LPAR   &kp RPAR
+&sys_reset  &bootloader  &none      &none      &none           &kp LBRC   &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC
+&sk LALT    &sk LGUI     &sk LCTRL  &sk LSHFT  &kp PIPE        &kp PLUS   &kp DLLR  &kp PRCNT  &kp CARET  &kp COLON
+&kp LC(Z)   &kp LC(X)    &kp LC(C)  &kp LC(V)  &paste_enter    &kp UNDER  &kp EXCL  &kp AT     &kp HASH   &kp TILDE
+                                    &none      &none           &kp LPAR   &kp RPAR
             >;
         };
 
         fun {
             bindings = <
-&none     &none     &none      &none      &none    &kp PSCRN        &kp F7   &kp F8  &kp F9  &kp F10
-&sk LALT  &sk LGUI  &sk LCTRL  &sk LSHFT  &none    &kp SCROLLLOCK   &kp F4   &kp F5  &kp F6  &kp F11
-&none     &none     &none      &none      &none    &kp PAUSE_BREAK  &kp F1   &kp F2  &kp F3  &kp F12
-                               &none      &none    &kp SPACE        &kp TAB
+&sys_reset  &none     &none      &none      &none    &kp PSCRN        &kp F7   &kp F8  &kp F9  &kp F10
+&sk LALT    &sk LGUI  &sk LCTRL  &sk LSHFT  &none    &kp SCROLLLOCK   &kp F4   &kp F5  &kp F6  &kp F11
+&none       &none     &none      &none      &none    &kp PAUSE_BREAK  &kp F1   &kp F2  &kp F3  &kp F12
+                                 &none      &none    &kp SPACE        &kp TAB
             >;
         };
 
