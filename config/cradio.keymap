@@ -50,26 +50,14 @@
         compatible = "zmk,combos";
 
         del {
-            bindings = <&kp DEL>;
+            bindings = <&lt 6 DEL>;
             key-positions = <31 30>;
             layers = <0 1>;
         };
 
         esc {
-            bindings = <&kp ESC>;
+            bindings = <&lt 3 ESC>;
             key-positions = <32 33>;
-        };
-
-        dash {
-            bindings = <&kp MINUS>;
-            key-positions = <32 33>;
-            layers = <5>;
-        };
-
-        under {
-            bindings = <&kp UNDER>;
-            key-positions = <32 33>;
-            layers = <6>;
         };
     };
 
