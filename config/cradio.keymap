@@ -26,6 +26,13 @@
                 <&sk LSHFT>,
                 <&caps_word>;
         };
+    as_ht: autoshift_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTOSHIFT_HOLD_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&shifted>, <&kp>;
+    };
     };
 
     conditional_layers {
@@ -63,6 +70,31 @@
             #binding-cells = <0>;
             bindings = <&none &kp LS(C) &kp N0 &kp R &kp R &kp E &kp C &kp T &kp DOT &kp H &kp O &kp R &kp S &kp E &kp DOT &kp B &kp A &kp T &kp T &kp E &kp R &kp Y &kp DOT &kp S &kp T &kp A &kp P &kp L &kp E &kp RET>;
         };
+    shifted: macro_shifted_kp {
+      #binding-cells = <1>;
+      label = "MACRO_SHIFTED_KP";
+      compatible = "zmk,behavior-macro-one-param";
+      bindings =
+        <&macro_press &kp LSHFT>,
+        <&macro_param_1to1 &macro_tap &kp MACRO_PLACEHOLDER>,
+        <&macro_release &kp LSHFT>;
+    };
+
+    as: autoshift {
+      compatible = "zmk,behavior-macro-one-param";
+      #binding-cells = <1>;
+      label = "AUTOSHIFT_KP";
+      bindings =
+        <&macro_press>,
+        <&macro_param_1to1>,
+        <&macro_param_1to2>,
+        <&as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
+        <&macro_pause_for_release>,
+        <&macro_release>,
+        <&macro_param_1to1>,
+        <&macro_param_1to2>,
+        <&as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
+    };
     };
 
     keymap {
