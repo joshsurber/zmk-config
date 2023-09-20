@@ -113,7 +113,7 @@
         mouse {
             bindings = <
 &kp PG_UP   &kp HOME   &kp UP      &kp END      &kp INS         &none        &none      &none      &bootloader  &sys_reset
-&kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &key_repeat     &key_repeat  &sk LSHFT  &sk LCTRL  &sk LGUI     &sk LALT
+&kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &trans          &key_repeat  &sk LSHFT  &sk LCTRL  &sk LGUI     &sk LALT
 &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &paste_enter    &none        &tog 1     &tog 5     &none        &none
                                    &trans       &trans          &none        &none
             >;
@@ -121,8 +121,8 @@
 
         media {
             bindings = <
-&kp PG_UP  &kp HOME    &kp C_VOL_UP  &kp END     &kp INS         &out OUT_BLE       &out OUT_USB  &none         &bootloader   &sys_reset
-&kp PG_DN  &kp C_PREV  &kp C_VOL_DN  &kp C_NEXT  &key_repeat     &ext_power EP_TOG  &sk LSHFT     &sk LCTRL     &sk LGUI      &sk LALT
+&trans     &trans      &kp C_VOL_UP  &trans      &trans          &out OUT_BLE       &out OUT_USB  &none         &bootloader   &sys_reset
+&trans     &kp C_PREV  &kp C_VOL_DN  &kp C_NEXT  &trans          &ext_power EP_TOG  &sk LSHFT     &sk LCTRL     &sk LGUI      &sk LALT
 &kp LC(Z)  &kp LC(X)   &kp LC(C)     &kp LC(V)   &paste_enter    &bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
                                      &trans      &trans          &none              &none
             >;
