@@ -120,7 +120,7 @@
 
         nav {
             bindings = <
-&none     &none     &none      &none      &none    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none
+&trans    &none     &none      &none      &none    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans
 &sk LALT  &sk LGUI  &sk LCTRL  &sk LSHFT  &none    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none
 &none     &none     &none      &none      &none    &none     &none      &none      &none      &none
                                &trans     &to 1    &to 0     &trans
@@ -129,10 +129,10 @@
 
         num {
             bindings = <
-&none     &none     &none      &none      &none        &none       &kp N7  &kp N8  &kp N9  &kp BSPC
-&sk LALT  &sk LGUI  &sk LCTRL  &sk LSHFT  &enter_pw    &kp RET     &kp N4  &kp N5  &kp N6  &kp N0
-&none     &none     &none      &none      &none        &none       &kp N1  &kp N2  &kp N3  &kp DOT
-                               &trans     &to 1        &lt 0 LGUI  &trans
+&bootloader  &none     &none      &none      &kp PSCRN    &none       &kp N7  &kp N8  &kp N9  &kp BSPC
+&sk LALT     &sk LGUI  &sk LCTRL  &sk LSHFT  &enter_pw    &kp RET     &kp N4  &kp N5  &kp N6  &kp N0
+&none        &none     &none      &none      &none        &none       &kp N1  &kp N2  &kp N3  &kp DOT
+                                  &trans     &to 1        &lt 0 LGUI  &trans
             >;
         };
     };
