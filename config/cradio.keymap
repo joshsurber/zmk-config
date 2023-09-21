@@ -111,28 +111,28 @@
 
         osl {
             bindings = <
-&kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &ht UNDER MINUS  &ht PLUS EQUAL
-&sk LALT   &sk LGUI   &sk LCTRL  &sk LSHFT  &kp PIPE     &kp SEMI   &kp RET   &kp TAB   &kp ESC          &kp BSPC
-&kp TILDE  &kp GRAVE  &kp LBRC   &kp LPAR   &kp LBKT     &kp RBKT   &kp RPAR  &kp RBRC  &kp COLON        &kp BSLH
-                                 &to 2      &to 3        &to 0      &trans
+&kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS     &kp STAR  &ht UNDER MINUS  &ht PLUS EQUAL
+&sk LALT   &sk LGUI   &sk LCTRL  &sk LSHFT  &kp PIPE     &kp SEMI   &kp RET      &kp TAB   &kp ESC          &kp BSPC
+&kp TILDE  &kp GRAVE  &kp LBRC   &kp LPAR   &kp LBKT     &kp RBKT   &kp RPAR     &kp RBRC  &kp COLON        &kp BSLH
+                                 &to 3      &to 2        &to 0      &key_repeat
+            >;
+        };
+
+        num {
+            bindings = <
+&bootloader  &none     &none      &none      &kp PSCRN    &none    &kp N7  &kp N8  &kp N9  &kp BSPC
+&sk LALT     &sk LGUI  &sk LCTRL  &sk LSHFT  &enter_pw    &kp RET  &kp N4  &kp N5  &kp N6  &kp N0
+&none        &none     &none      &none      &none        &none    &kp N1  &kp N2  &kp N3  &kp DOT
+                                  &trans     &to 1        &to 0    &trans
             >;
         };
 
         nav {
             bindings = <
 &trans    &none     &none      &none      &none    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans
-&sk LALT  &sk LGUI  &sk LCTRL  &sk LSHFT  &none    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none
-&none     &none     &none      &none      &none    &none     &none      &none      &none      &none
-                               &trans     &to 1    &to 0     &trans
-            >;
-        };
-
-        num {
-            bindings = <
-&bootloader  &none     &none      &none      &kp PSCRN    &none       &kp N7  &kp N8  &kp N9  &kp BSPC
-&sk LALT     &sk LGUI  &sk LCTRL  &sk LSHFT  &enter_pw    &kp RET     &kp N4  &kp N5  &kp N6  &kp N0
-&none        &none     &none      &none      &none        &none       &kp N1  &kp N2  &kp N3  &kp DOT
-                                  &trans     &to 1        &lt 0 LGUI  &trans
+&sk LALT  &sk LGUI  &sk LCTRL  &sk LSHFT  &none    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
+&none     &none     &none      &none      &none    &none     &kp RET    &kp TAB    &kp ESC    &kp DEL
+                               &none      &to 1    &to 0     &none
             >;
         };
     };
