@@ -100,21 +100,39 @@
     keymap {
         compatible = "zmk,keymap";
 
+        na {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
+            >;
+        };
+
         default_layer {
             bindings = <
 &kp Q  &kp W  &kp F  &kp P      &kp G    &kp J           &kp L   &kp U            &kp Y          &ht LC(BSPC) BSPC
 &kp A  &kp R  &kp S  &kp T      &kp D    &kp H           &kp N   &kp E            &kp I          &kp O
 &kp Z  &kp X  &kp C  &kp V      &kp B    &kp K           &kp M   &ht UNDER COMMA  &ht MINUS DOT  &ht EXCL SLASH
-                     &sk LCTRL  &sl 1    &mt LGUI SPACE  &sh_cw
+                     &sk LCTRL  &sl 2    &mt LGUI SPACE  &sh_cw
             >;
         };
 
         osl {
             bindings = <
 &kp ESC  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &ht COLON SEMI  &kp BSPC
-&kp TAB  &kp     &kp LBRC  &kp LPAR  &kp LBKT     &kp RBKT   &kp RBRC  &kp RPAR  &kp             &trans
-&kp      &kp     &kp       &kp       &kp          &kp        &kp       &kp       &kp             &kp RET
-                           &kp       &to 2        &to 0      &kp
+&to 3    &kp     &kp LBRC  &kp LPAR  &kp LBKT     &kp RBKT   &kp RBRC  &kp RPAR  &kp             &trans
+&kp TAB  &kp     &kp       &kp       &kp          &kp        &kp       &kp       &kp             &kp RET
+                           &kp       &to 4        &to 1      &kp
+            >;
+        };
+
+        nav {
+            bindings = <
+&kp ESC  &kp       &kp UP    &kp        &kp      &kp LA(LEFT)  &kp LS(LC(TAB))  &kp LC(TAB)  &kp LA(RIGHT)  &kp BSPC
+&kp      &kp LEFT  &kp DOWN  &kp RIGHT  &kp      &kp LEFT      &kp DOWN         &kp UP       &kp RIGHT      &kp
+&kp TAB  &kp       &kp       &kp        &kp      &kp           &kp              &kp          &kp            &kp RET
+                             &kp        &to 2    &to 1         &kp
             >;
         };
 
@@ -123,16 +141,7 @@
 &kp ESC     &kp         &kp C_VOL_UP  &kp         &kp      &kp         &kp N7  &kp N8  &kp N9  &kp BSPC
 &kp C_PLAY  &kp C_PREV  &kp C_VOL_DN  &kp C_NEXT  &kp      &kp         &kp N4  &kp N5  &kp N6  &kp N0
 &kp TAB     &kp         &kp           &kp         &kp      &kp         &kp N1  &kp N2  &kp N3  &kp RET
-                                      &kp         &to 1    &lt 0 LGUI  &kp
-            >;
-        };
-
-        nav {
-            bindings = <
-&kp  &kp  &kp  &kp  &kp      &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp
-&kp  &kp  &kp  &kp  &kp      &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp
-&kp  &kp  &kp  &kp  &kp      &kp       &kp        &kp        &kp        &kp
-               &kp  &to 1    &to 0     &kp
+                                      &kp         &to 2    &lt 1 LGUI  &kp
             >;
         };
     };
