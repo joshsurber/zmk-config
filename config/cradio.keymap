@@ -111,7 +111,7 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp F  &kp P      &kp G    &kp J           &kp L   &kp U            &kp Y          &ht LC(BSPC) BSPC
+&kp Q  &kp W  &kp F  &kp P      &kp G    &kp J           &kp L   &kp U            &kp Y          &kp APOS
 &kp A  &kp R  &kp S  &kp T      &kp D    &kp H           &kp N   &kp E            &kp I          &kp O
 &kp Z  &kp X  &kp C  &kp V      &kp B    &kp K           &kp M   &ht UNDER COMMA  &ht MINUS DOT  &ht EXCL SLASH
                      &sk LCTRL  &sl 2    &mt LGUI SPACE  &sh_cw
@@ -120,28 +120,28 @@
 
         osl {
             bindings = <
-&kp ESC  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &ht COLON SEMI  &kp BSPC
-&to 3    &kp     &kp LBRC  &kp LPAR  &kp LBKT     &kp RBKT   &kp RBRC  &kp RPAR  &kp             &trans
-&kp TAB  &kp     &kp       &kp       &kp          &kp        &kp       &kp       &kp             &kp RET
-                           &kp       &to 4        &to 1      &kp
+&kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &ht UNDER MINUS  &ht PLUS EQUAL
+&sk LALT   &sk LGUI   &sk LCTRL  &sk LSHFT  &kp PIPE     &kp SEMI   &kp RET   &kp TAB   &kp ESC          &kp BSPC
+&kp TILDE  &kp GRAVE  &kp LBRC   &kp LPAR   &kp LBKT     &kp RBKT   &kp RPAR  &kp RBRC  &kp COLON        &kp BSLH
+                                 &to 3      &to 4        &to 1      &trans
             >;
         };
 
         nav {
             bindings = <
-&kp ESC  &kp       &kp UP    &kp        &kp      &kp LA(LEFT)  &kp LS(LC(TAB))  &kp LC(TAB)  &kp LA(RIGHT)  &kp BSPC
-&kp      &kp LEFT  &kp DOWN  &kp RIGHT  &kp      &kp LEFT      &kp DOWN         &kp UP       &kp RIGHT      &kp
-&kp TAB  &kp       &kp       &kp        &kp      &kp           &kp              &kp          &kp            &kp RET
-                             &kp        &to 2    &to 1         &kp
+&none     &none     &none      &none      &none    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none
+&sk LALT  &sk LGUI  &sk LCTRL  &sk LSHFT  &none    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none
+&none     &none     &none      &none      &none    &none     &none      &none      &none      &none
+                               &trans     &to 2    &to 1     &trans
             >;
         };
 
         num {
             bindings = <
-&kp ESC     &kp         &kp C_VOL_UP  &kp         &kp      &kp         &kp N7  &kp N8  &kp N9  &kp BSPC
-&kp C_PLAY  &kp C_PREV  &kp C_VOL_DN  &kp C_NEXT  &kp      &kp         &kp N4  &kp N5  &kp N6  &kp N0
-&kp TAB     &kp         &kp           &kp         &kp      &kp         &kp N1  &kp N2  &kp N3  &kp RET
-                                      &kp         &to 2    &lt 1 LGUI  &kp
+&none     &none     &none      &none      &none        &none       &kp N7  &kp N8  &kp N9  &kp BSPC
+&sk LALT  &sk LGUI  &sk LCTRL  &sk LSHFT  &enter_pw    &kp RET     &kp N4  &kp N5  &kp N6  &kp N0
+&none     &none     &none      &none      &none        &none       &kp N1  &kp N2  &kp N3  &kp DOT
+                               &trans     &to 2        &lt 1 LGUI  &trans
             >;
         };
     };
