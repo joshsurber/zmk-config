@@ -76,7 +76,7 @@
             compatible = "zmk,behavior-macro";
             label = "ENTER_PW";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(C) &kp N0 &kp R &kp R &kp E &kp C &kp T &kp DOT &kp H &kp O &kp R &kp S &kp E &kp DOT &kp B &kp A &kp T &kp T &kp E &kp R &kp Y &kp DOT &kp S &kp T &kp A &kp P &kp L &kp E &kp RET>;
+            bindings = <&kp LS(C) &kp N0 &kp R &kp R &kp E &kp C &kp T &kp DOT &kp H &kp O &kp R &kp S &kp E &kp DOT &kp B &kp A &kp T &kp T &kp E &kp R &kp Y &kp DOT &kp S &kp T &kp A &kp P &kp L &kp E &kp RET &to 0>;
         };
         shifted: macro_shifted_kp {
             #binding-cells = <1>;
@@ -114,37 +114,37 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp F  &kp P  &kp G    &kp J        &kp L   &kp U            &kp Y          &kp APOS
-&kp A  &kp R  &kp S  &kp T  &kp D    &kp H        &kp N   &kp E            &kp I          &kp O
-&kp Z  &kp X  &kp C  &kp V  &kp B    &kp K        &kp M   &ht UNDER COMMA  &ht MINUS DOT  &kp SLASH
-                     &sl 2  &sl 1    &lt 3 SPACE  &sh_cw
+&kp Q  &kp W  &kp F  &kp P      &kp G    &kp J           &kp L   &kp U            &kp Y          &kp APOS
+&kp A  &kp R  &kp S  &kp T      &kp D    &kp H           &kp N   &kp E            &kp I          &kp O
+&kp Z  &kp X  &kp C  &kp V      &kp B    &kp K           &kp M   &ht UNDER COMMA  &ht MINUS DOT  &kp SLASH
+                     &sk LCTRL  &sl 1    &mt LGUI SPACE  &sh_cw
             >;
         };
 
         osl {
             bindings = <
-&kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp CARET    &kp AMPS  &kp STAR  &ht UNDER MINUS  &ht PLUS EQUAL
-&sk LALT   &sk LGUI   &sk LCTRL  &sk LSHFT  &kp PIPE     &kp SEMI     &kp RET   &kp TAB   &kp ESC          &kp BSPC
-&kp TILDE  &kp GRAVE  &kp LBRC   &kp LPAR   &kp LBKT     &kp RBKT     &kp RPAR  &kp RBRC  &kp COLON        &kp BSLH
-                                 &trans     &trans       &key_repeat  &trans
+&kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &ht UNDER MINUS  &ht PLUS EQUAL
+&sk LALT   &sk LGUI   &sk LCTRL  &sk LSHFT  &kp PIPE     &kp SEMI   &kp RET   &kp TAB   &kp ESC          &kp BSPC
+&kp TILDE  &kp GRAVE  &kp LBRC   &kp LPAR   &kp LBKT     &kp RBKT   &kp RPAR  &kp RBRC  &kp COLON        &kp BSLH
+                                 &to 2      &to 3        &to 0      &trans
             >;
         };
 
         nav {
             bindings = <
-&trans     &none      &none      &none      &none           &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp PSCRN
+&none      &none      &none      &none      &none           &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp PSCRN
 &sk LALT   &sk LGUI   &sk LCTRL  &sk LSHFT  &none           &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
 &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &paste_enter    &none     &kp RET    &kp TAB    &kp ESC    &kp DEL
-                                 &trans     &trans          &trans    &none
+                                 &trans     &to 1           &to 0     &none
             >;
         };
 
         num {
             bindings = <
-&bootloader  &none         &none         &none       &none         &enter_pw  &kp N7  &kp N8  &kp N9  &kp BSPC
-&sk LALT     &sk LGUI      &sk LCTRL     &sk LSHFT   &none         &kp RET    &kp N4  &kp N5  &kp N6  &kp N0
-&kp C_PREV   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &none         &none      &kp N1  &kp N2  &kp N3  &kp DOT
-                                         &none       &kp C_PLAY    &none      &none
+&to 4       &none         &none       &none         &enter_pw     &enter_pw  &kp N7  &kp N8  &kp N9  &kp BSPC
+&sk LALT    &sk LGUI      &sk LCTRL   &sk LSHFT     &none         &kp RET    &kp N4  &kp N5  &kp N6  &kp N0
+&kp C_PREV  &kp C_VOL_DN  &kp C_PLAY  &kp C_VOL_UP  &kp C_NEXT    &none      &kp N1  &kp N2  &kp N3  &kp DOT
+                                      &none         &to 1         &to 0      &none
             >;
         };
 
@@ -153,7 +153,7 @@
 &bootloader  &trans  &trans  &trans  &trans    &trans      &trans        &trans        &trans        &bootloader
 &trans       &trans  &trans  &trans  &trans    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
 &trans       &trans  &trans  &trans  &trans    &trans      &trans        &trans        &trans        &trans
-                             &trans  &trans    &trans      &trans
+                             &trans  &to 1     &to 0       &trans
             >;
         };
     };
