@@ -14,11 +14,13 @@
             label = "hold_tap";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <300>;
+            flavor = "balanced";
+            tapping-term-ms = <400>;
             bindings =
                 <&kp>,
                 <&kp>;
+
+            global-quick-tap;
         };
         sh_cw: shift_caps_word {
             compatible = "zmk,behavior-tap-dance";
@@ -100,7 +102,7 @@
         nav {
             bindings = <
 &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp PSCRN       &enter_pw     &none      &none      &bootloader  &sys_reset
-&kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp TAB         &key_repeat   &sk LSHFT  &sk LCTRL  &sk LGUI     &sk LALT
+&kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &caps_word      &key_repeat   &sk LSHFT  &sk LCTRL  &sk LGUI     &sk LALT
 &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &paste_enter    &paste_enter  &kp LC(V)  &kp LC(C)  &kp LC(X)    &kp LC(Z)
                                  &kp ESC    &kp DEL         &none         &none
             >;
