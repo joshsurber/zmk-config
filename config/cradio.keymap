@@ -114,9 +114,9 @@
 
         default_layer {
             bindings = <
-&as Q  &as W  &as F  &as P  &as G    &as J        &as L   &as U            &as Y          &as APOS
-&as A  &as R  &as S  &as T  &as D    &as H        &as N   &as E            &as I          &as O
-&as Z  &as X  &as C  &as V  &as B    &as K        &as M   &ht UNDER COMMA  &ht MINUS DOT  &kp SLASH
+&kp Q  &kp W  &kp F  &kp P  &kp G    &kp J        &kp L   &kp U            &kp Y          &kp APOS
+&kp A  &kp R  &kp S  &kp T  &kp D    &kp H        &kp N   &kp E            &kp I          &kp O
+&kp Z  &kp X  &kp C  &kp V  &kp B    &kp K        &kp M   &ht UNDER COMMA  &ht MINUS DOT  &kp SLASH
                      &sl 2  &sl 1    &lt 3 SPACE  &sh_cw
             >;
         };
