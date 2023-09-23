@@ -47,6 +47,11 @@
 
     combos {
         compatible = "zmk,combos";
+
+        fun_pscrn {
+            bindings = <&lt 4 PSCRN>;
+            key-positions = <30 31>;
+        };
     };
 
     macros {
@@ -92,10 +97,10 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W       &kp F        &kp P      &kp G         &kp J        &kp L   &kp U        &kp Y       &kp SINGLE_QUOTE
-&ht LALT A  &ht LGUI R  &ht LCTRL S  &kp T      &kp D         &kp H        &kp N   &ht LCTRL E  &ht LGUI I  &ht LALT O
-&kp Z       &kp X       &kp C        &kp V      &kp B         &kp K        &kp M   &kp COMMA    &kp DOT     &kp FSLH
-                                     &lt 3 RET  &lt 2 BSPC    &lt 1 SPACE  &sh_cw
+&kp Q       &kp W       &kp F        &kp P        &kp G         &kp J        &kp L        &kp U        &kp Y       &kp SINGLE_QUOTE
+&ht LALT A  &ht LGUI R  &ht LCTRL S  &ht LSHFT T  &kp D         &kp H        &ht LSHFT N  &ht LCTRL E  &ht LGUI I  &ht LALT O
+&kp Z       &kp X       &kp C        &kp V        &kp B         &kp K        &kp M        &kp COMMA    &kp DOT     &kp FSLH
+                                     &lt 3 RET    &lt 2 BSPC    &lt 1 SPACE  &sh_cw
             >;
         };
 
@@ -110,7 +115,7 @@
 
         num {
             bindings = <
-&sys_reset  &bootloader  &none      &mo 4      &none           &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
+&sys_reset  &bootloader  &none      &none      &none           &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
 &sk LALT    &sk LGUI     &sk LCTRL  &sk LSHFT  &kp BSLH        &kp MINUS  &kp N4   &kp N5  &kp N6  &kp SEMI
 &kp LC(Z)   &kp LC(X)    &kp LC(C)  &kp LC(V)  &paste_enter    &kp EQUAL  &kp N1   &kp N2  &kp N3  &kp GRAVE
                                     &none      &none           &kp N0     &kp DOT
@@ -119,7 +124,7 @@
 
         sym {
             bindings = <
-&sys_reset  &bootloader  &none      &mo 4      &none           &kp LBRC   &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC
+&sys_reset  &bootloader  &none      &none      &none           &kp LBRC   &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC
 &sk LALT    &sk LGUI     &sk LCTRL  &sk LSHFT  &kp PIPE        &kp UNDER  &kp DLLR  &kp PRCNT  &kp CARET  &kp COLON
 &kp LC(Z)   &kp LC(X)    &kp LC(C)  &kp LC(V)  &paste_enter    &kp PLUS   &kp EXCL  &kp AT     &kp HASH   &kp TILDE
                                     &none      &none           &kp LPAR   &kp RPAR
@@ -128,10 +133,10 @@
 
         fun {
             bindings = <
-&sys_reset    &none         &none         &none         &out OUT_USB    &kp PSCRN  &kp F7   &kp F8  &kp F9  &kp F10
-&sk LALT      &sk LGUI      &sk LCTRL     &sk LSHFT     &out OUT_BLE    &none      &kp F4   &kp F5  &kp F6  &kp F11
-&bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR      &none      &kp F1   &kp F2  &kp F3  &kp F12
-                                          &none         &none           &kp SPACE  &kp TAB
+&sys_reset    &none         &none         &none         &out OUT_USB    &kp PSCRN  &kp F7  &kp F8  &kp F9  &kp F10
+&kp LALT      &kp LGUI      &kp LCTRL     &kp LSHFT     &out OUT_BLE    &none      &kp F4  &kp F5  &kp F6  &kp F11
+&bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR      &none      &kp F1  &kp F2  &kp F3  &kp F12
+                                          &none         &none           &none      &none
             >;
         };
     };
