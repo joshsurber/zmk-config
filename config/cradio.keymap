@@ -29,6 +29,8 @@
             bindings =
                 <&sk LSHFT>,
                 <&caps_word>;
+
+            tapping-term-ms = <300>;
         };
         as_ht: autoshift_hold_tap {
             compatible = "zmk,behavior-hold-tap";
