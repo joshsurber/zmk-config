@@ -92,17 +92,17 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W       &kp F        &kp P        &kp G         &kp J        &kp L          &kp U        &kp Y       &kp SINGLE_QUOTE
-&ht LALT A  &ht LGUI R  &ht LCTRL S  &ht LSHFT T  &kp D         &kp H        &ht LSHFT N    &ht LCTRL E  &ht LGUI I  &ht LALT O
-&kp Z       &kp X       &kp C        &kp V        &kp B         &kp K        &kp M          &kp COMMA    &kp DOT     &kp FSLH
-                                     &lt 3 RET    &lt 2 BSPC    &lt 1 SPACE  &ht LSHFT TAB
+&kp Q       &kp W       &kp F        &kp P      &kp G         &kp J        &kp L   &kp U        &kp Y       &kp SINGLE_QUOTE
+&ht LALT A  &ht LGUI R  &ht LCTRL S  &kp T      &kp D         &kp H        &kp N   &ht LCTRL E  &ht LGUI I  &ht LALT O
+&kp Z       &kp X       &kp C        &kp V      &kp B         &kp K        &kp M   &kp COMMA    &kp DOT     &kp FSLH
+                                     &lt 3 RET  &lt 2 BSPC    &lt 1 SPACE  &sh_cw
             >;
         };
 
         nav {
             bindings = <
 &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp PSCRN       &enter_pw     &none      &none      &bootloader  &sys_reset
-&kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &caps_word      &key_repeat   &sk LSHFT  &sk LCTRL  &sk LGUI     &sk LALT
+&kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp TAB         &key_repeat   &sk LSHFT  &sk LCTRL  &sk LGUI     &sk LALT
 &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &paste_enter    &paste_enter  &kp LC(V)  &kp LC(C)  &kp LC(X)    &kp LC(Z)
                                  &kp ESC    &kp DEL         &none         &none
             >;
@@ -128,7 +128,7 @@
 
         fun {
             bindings = <
-&sys_reset    &none         &none         &none         &out OUT_USB    &none      &kp F7   &kp F8  &kp F9  &kp F10
+&sys_reset    &none         &none         &none         &out OUT_USB    &kp PSCRN  &kp F7   &kp F8  &kp F9  &kp F10
 &sk LALT      &sk LGUI      &sk LCTRL     &sk LSHFT     &out OUT_BLE    &none      &kp F4   &kp F5  &kp F6  &kp F11
 &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR      &none      &kp F1   &kp F2  &kp F3  &kp F12
                                           &none         &none           &kp SPACE  &kp TAB
