@@ -142,10 +142,10 @@
 
         nav {
             bindings = <
-&kp PG_UP  &kp HOME   &kp UP     &kp END    &kp PSCRN       &enter_pw     &none      &none      &bootloader  &sys_reset
-&kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp TAB         &key_repeat   &sk LSHFT  &sk LCTRL  &sk LGUI     &sk LALT
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &paste_enter    &paste_enter  &kp LC(V)  &kp LC(C)  &kp LC(X)    &kp LC(Z)
-                                 &kp TAB    &kp ESC         &none         &none
+&kp PG_UP  &kp HOME   &kp UP     &kp END    &kp LC(LS(TAB))    &enter_pw     &none      &none      &bootloader  &sys_reset
+&kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp LC(TAB)        &key_repeat   &sk LSHFT  &sk LCTRL  &sk LGUI     &sk LALT
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &paste_enter       &paste_enter  &kp LC(V)  &kp LC(C)  &kp LC(X)    &kp LC(Z)
+                                 &kp TAB    &kp ESC            &none         &none
             >;
         };
 
