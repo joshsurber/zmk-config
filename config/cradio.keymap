@@ -80,6 +80,16 @@
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
+
+        navtemp {
+            if-layers = <5>;
+            then-layer = <1>;
+        };
+
+        navlock {
+            if-layers = <6>;
+            then-layer = <1>;
+        };
     };
 
     combos {
@@ -115,34 +125,34 @@
 &kp Q        &kp W        &kp F         &kp P         &kp G           &kp J        &kp L         &kp U         &kp Y        &kp SINGLE_QUOTE
 &hrm LALT A  &hrm LGUI R  &hrm LCTRL S  &hrm LSHFT T  &kp D           &kp H        &hrm LSHFT N  &hrm LCTRL E  &hrm LGUI I  &hrm LALT O
 &kp Z        &kp X        &kp C         &kp V         &kp B           &kp K        &kp M         &kp COMMA     &kp DOT      &kp FSLH
-                                        &lt 3 RET     &lt_bksp 2 0    &lt 1 SPACE  &sh_cw
+                                        &lt 3 RET     &lt_bksp 2 0    &lt 5 SPACE  &sh_cw
             >;
         };
 
         nav {
             bindings = <
-&kp PG_UP  &kp HOME   &kp UP     &kp END          &kp LC(LS(TAB))    &enter_pw    &none            &none      &bootloader  &sys_reset
-&kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT        &kp LC(TAB)        &key_repeat  &sk LSHFT        &sk LCTRL  &sk LGUI     &sk LALT
+&kp PG_UP  &kp HOME   &kp UP     &kp END         &kp LC(LS(TAB))    &enter_pw    &none           &tog 6     &bootloader  &sys_reset
+&kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT       &kp LC(TAB)        &key_repeat  &sk LSHFT       &sk LCTRL  &sk LGUI     &sk LALT
 &kp LC(Z)  &kp LC(X)  &kp LC(C)  &paste 0 LC(V)  &kp LC(A)          &kp LC(A)    &paste 0 LC(V)  &kp LC(C)  &kp LC(X)    &kp LC(Z)
-                                 &kp TAB          &kp ESC            &none        &none
+                                 &kp TAB         &kp ESC            &none        &none
             >;
         };
 
         num {
             bindings = <
-&sys_reset  &bootloader  &none      &none            &none        &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
-&sk LALT    &sk LGUI     &sk LCTRL  &sk LSHFT        &kp BSLH     &kp MINUS  &kp N4   &kp N5  &kp N6  &kp SEMI
+&sys_reset  &bootloader  &none      &none           &none        &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
+&sk LALT    &sk LGUI     &sk LCTRL  &sk LSHFT       &kp BSLH     &kp MINUS  &kp N4   &kp N5  &kp N6  &kp SEMI
 &kp LC(Z)   &kp LC(X)    &kp LC(C)  &paste 0 LC(V)  &kp LC(A)    &kp EQUAL  &kp N1   &kp N2  &kp N3  &kp GRAVE
-                                    &none            &none        &kp N0     &kp DOT
+                                    &none           &none        &kp N0     &kp DOT
             >;
         };
 
         sym {
             bindings = <
-&sys_reset  &bootloader  &none      &none            &none        &kp LBRC   &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC
-&sk LALT    &sk LGUI     &sk LCTRL  &sk LSHFT        &kp PIPE     &kp UNDER  &kp DLLR  &kp PRCNT  &kp CARET  &kp COLON
+&sys_reset  &bootloader  &none      &none           &none        &kp LBRC   &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC
+&sk LALT    &sk LGUI     &sk LCTRL  &sk LSHFT       &kp PIPE     &kp UNDER  &kp DLLR  &kp PRCNT  &kp CARET  &kp COLON
 &kp LC(Z)   &kp LC(X)    &kp LC(C)  &paste 0 LC(V)  &kp LC(A)    &kp PLUS   &kp EXCL  &kp AT     &kp HASH   &kp TILDE
-                                    &none            &none        &kp LPAR   &kp RPAR
+                                    &none           &none        &kp LPAR   &kp RPAR
             >;
         };
 
@@ -152,6 +162,24 @@
 &kp LALT      &kp LGUI      &kp LCTRL     &kp LSHFT     &out OUT_BLE    &none  &kp F4  &kp F5  &kp F6  &kp F11
 &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR      &none  &kp F1  &kp F2  &kp F3  &kp F12
                                           &none         &none           &none  &none
+            >;
+        };
+
+        navtemp {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
+            >;
+        };
+
+        navlock {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &tog 6
+&trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
+&trans  &trans  &trans  &trans  &trans    &trans    &kp RET    &kp TAB    &kp ESC    &kp DEL
+                        &trans  &trans    &trans    &trans
             >;
         };
     };
