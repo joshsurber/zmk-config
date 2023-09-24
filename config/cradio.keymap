@@ -103,7 +103,7 @@
 
         symtemp {
             if-layers = <9>;
-            then-layer = <9>;
+            then-layer = <3>;
         };
 
         symlock {
