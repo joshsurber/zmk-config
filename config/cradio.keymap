@@ -22,6 +22,16 @@
 
             global-quick-tap;
         };
+        sh_cw: shift_caps_word {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_CAPS_WORD";
+            #binding-cells = <0>;
+            bindings =
+                <&sk LSHFT>,
+                <&caps_word>;
+
+            tapping-term-ms = <300>;
+        };
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP";
