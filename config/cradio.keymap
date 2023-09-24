@@ -90,6 +90,26 @@
             if-layers = <6>;
             then-layer = <1>;
         };
+
+        numtemp {
+            if-layers = <7>;
+            then-layer = <2>;
+        };
+
+        numlock {
+            if-layers = <8>;
+            then-layer = <2>;
+        };
+
+        symtemp {
+            if-layers = <9>;
+            then-layer = <9>;
+        };
+
+        symlock {
+            if-layers = <10>;
+            then-layer = <3>;
+        };
     };
 
     combos {
@@ -125,7 +145,7 @@
 &kp Q        &kp W        &kp F         &kp P         &kp G           &kp J        &kp L         &kp U         &kp Y        &kp SINGLE_QUOTE
 &hrm LALT A  &hrm LGUI R  &hrm LCTRL S  &hrm LSHFT T  &kp D           &kp H        &hrm LSHFT N  &hrm LCTRL E  &hrm LGUI I  &hrm LALT O
 &kp Z        &kp X        &kp C         &kp V         &kp B           &kp K        &kp M         &kp COMMA     &kp DOT      &kp FSLH
-                                        &lt 3 RET     &lt_bksp 2 0    &lt 5 SPACE  &sh_cw
+                                        &lt 9 RET     &lt_bksp 7 0    &lt 5 SPACE  &sh_cw
             >;
         };
 
@@ -180,6 +200,42 @@
 &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans     &trans
 &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
                         &trans  &trans    &trans    &trans
+            >;
+        };
+
+        numtemp {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
+            >;
+        };
+
+        numlock {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
+            >;
+        };
+
+        symtemp {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
+            >;
+        };
+
+        symlock {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
     };
