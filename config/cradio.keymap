@@ -10,8 +10,8 @@
 
 / {
     behaviors {
-        ht: hold_tap {
-            label = "hold_tap";
+        hrm: home_row_mod {
+            label = "home_row_mod";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -41,6 +41,39 @@
                 <&shifted>,
                 <&kp>;
         };
+        ht: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+        };
+        bksp_del: bksp_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BKSP_DEL";
+            bindings =
+                <&kp BSPC>,
+                <&kp DEL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        lt_bksp: lt_bksp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_BKSP";
+            bindings =
+                <&mo>,
+                <&bksp_del>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     conditional_layers {
@@ -53,6 +86,7 @@
         fun_pscrn {
             bindings = <&lt 4 PSCRN>;
             key-positions = <30 31>;
+            layers = <0>;
         };
     };
 
@@ -99,10 +133,10 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W       &kp F        &kp P        &kp G         &kp J        &kp L        &kp U        &kp Y       &kp SINGLE_QUOTE
-&ht LALT A  &ht LGUI R  &ht LCTRL S  &ht LSHFT T  &kp D         &kp H        &ht LSHFT N  &ht LCTRL E  &ht LGUI I  &ht LALT O
-&kp Z       &kp X       &kp C        &kp V        &kp B         &kp K        &kp M        &kp COMMA    &kp DOT     &kp FSLH
-                                     &lt 3 RET    &lt 2 BSPC    &lt 1 SPACE  &sh_cw
+&kp Q        &kp W        &kp F         &kp P         &kp G           &kp J        &kp L         &kp U         &kp Y        &kp SINGLE_QUOTE
+&hrm LALT A  &hrm LGUI R  &hrm LCTRL S  &hrm LSHFT T  &kp D           &kp H        &hrm LSHFT N  &hrm LCTRL E  &hrm LGUI I  &hrm LALT O
+&kp Z        &kp X        &kp C         &kp V         &kp B           &kp K        &kp M         &kp COMMA     &kp DOT      &kp FSLH
+                                        &lt 3 RET     &lt_bksp 2 0    &lt 1 SPACE  &sh_cw
             >;
         };
 
@@ -111,7 +145,7 @@
 &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp PSCRN       &enter_pw     &none      &none      &bootloader  &sys_reset
 &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp TAB         &key_repeat   &sk LSHFT  &sk LCTRL  &sk LGUI     &sk LALT
 &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &paste_enter    &paste_enter  &kp LC(V)  &kp LC(C)  &kp LC(X)    &kp LC(Z)
-                                 &kp ESC    &kp DEL         &none         &none
+                                 &kp TAB    &kp ESC         &none         &none
             >;
         };
 
