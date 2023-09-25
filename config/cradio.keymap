@@ -76,6 +76,28 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+        copy: copy {
+            compatible = "zmk,behavior-hold-tap";
+            label = "COPY";
+            bindings =
+                <&sel_copy>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+        cut: cut {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CUT";
+            bindings =
+                <&sel_cut>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     conditional_layers {
@@ -105,6 +127,18 @@
             #binding-cells = <0>;
             bindings = <&kp LC(V) &kp RET>;
         };
+        sel_cut: sel_cut {
+            compatible = "zmk,behavior-macro";
+            label = "SEL_CUT";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp LC(X)>;
+        };
+        sel_copy: sel_copy {
+            compatible = "zmk,behavior-macro";
+            label = "SEL_COPY";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp LC(C)>;
+        };
     };
 
     keymap {
@@ -121,28 +155,28 @@
 
         nav {
             bindings = <
-&kp PG_UP  &kp HOME   &kp UP     &kp END         &kp LC(LS(TAB))    &enter_pw    &none           &to 5      &bootloader  &sys_reset
-&kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT       &kp LC(TAB)        &key_repeat  &sk LSHFT       &sk LCTRL  &sk LGUI     &sk LALT
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &paste 0 LC(V)  &kp LC(A)          &kp LC(A)    &paste 0 LC(V)  &kp LC(C)  &kp LC(X)    &kp LC(Z)
-                                 &kp TAB         &kp ESC            &none        &none
+&kp PG_UP  &kp HOME      &kp UP         &kp END         &kp LC(LS(TAB))    &enter_pw    &none           &to 5          &bootloader   &sys_reset
+&kp PG_DN  &kp LEFT      &kp DOWN       &kp RIGHT       &kp LC(TAB)        &key_repeat  &sk LSHFT       &sk LCTRL      &sk LGUI      &sk LALT
+&kp LC(Z)  &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)          &kp LC(A)    &paste 0 LC(V)  &copy 0 LC(C)  &cut 0 LC(X)  &kp LC(Z)
+                                        &kp TAB         &kp ESC            &none        &none
             >;
         };
 
         num {
             bindings = <
-&sys_reset  &bootloader  &none      &none           &none        &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
-&sk LALT    &sk LGUI     &sk LCTRL  &sk LSHFT       &kp BSLH     &kp MINUS  &kp N4   &kp N5  &kp N6  &kp SEMI
-&kp LC(Z)   &kp LC(X)    &kp LC(C)  &paste 0 LC(V)  &kp LC(A)    &kp EQUAL  &kp N1   &kp N2  &kp N3  &kp GRAVE
-                                    &none           &none        &kp N0     &kp DOT
+&sys_reset  &bootloader   &none          &none           &none        &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
+&sk LALT    &sk LGUI      &sk LCTRL      &sk LSHFT       &kp BSLH     &kp MINUS  &kp N4   &kp N5  &kp N6  &kp SEMI
+&kp LC(Z)   &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)    &kp EQUAL  &kp N1   &kp N2  &kp N3  &kp GRAVE
+                                         &none           &none        &kp N0     &kp DOT
             >;
         };
 
         sym {
             bindings = <
-&sys_reset  &bootloader  &none      &none           &none        &kp LBRC   &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC
-&sk LALT    &sk LGUI     &sk LCTRL  &sk LSHFT       &kp PIPE     &kp UNDER  &kp DLLR  &kp PRCNT  &kp CARET  &kp COLON
-&kp LC(Z)   &kp LC(X)    &kp LC(C)  &paste 0 LC(V)  &kp LC(A)    &kp PLUS   &kp EXCL  &kp AT     &kp HASH   &kp TILDE
-                                    &none           &none        &kp LPAR   &kp RPAR
+&sys_reset  &bootloader   &none          &none           &none        &kp LBRC   &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC
+&sk LALT    &sk LGUI      &sk LCTRL      &sk LSHFT       &kp PIPE     &kp UNDER  &kp DLLR  &kp PRCNT  &kp CARET  &kp COLON
+&kp LC(Z)   &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)    &kp PLUS   &kp EXCL  &kp AT     &kp HASH   &kp TILDE
+                                         &none           &none        &kp LPAR   &kp RPAR
             >;
         };
 
@@ -157,10 +191,10 @@
 
         vim {
             bindings = <
-&none      &none      &none      &none           &none        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &to 0
-&kp LALT   &kp LGUI   &kp LCTRL  &kp LSHFT       &none        &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &paste 0 LC(V)  &kp LC(A)    &kp V     &kp RET    &kp TAB    &kp ESC    &kp DEL
-                                 &none           &none        &none     &none
+&none      &none         &none          &none           &none        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &to 0
+&kp LALT   &kp LGUI      &kp LCTRL      &kp LSHFT       &none        &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
+&kp LC(Z)  &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)    &to 0     &kp RET    &kp TAB    &kp ESC    &kp DEL
+                                        &none           &none        &none     &none
             >;
         };
     };
