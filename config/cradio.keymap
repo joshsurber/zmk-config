@@ -82,32 +82,32 @@
         compatible = "zmk,conditional-layers";
 
         navtemp {
-            if-layers = <5>;
-            then-layer = <1>;
-        };
-
-        navlock {
             if-layers = <6>;
             then-layer = <1>;
         };
 
-        numtemp {
+        navlock {
             if-layers = <7>;
-            then-layer = <2>;
+            then-layer = <1>;
         };
 
-        numlock {
+        numtemp {
             if-layers = <8>;
             then-layer = <2>;
         };
 
-        symtemp {
+        numlock {
             if-layers = <9>;
+            then-layer = <2>;
+        };
+
+        symtemp {
+            if-layers = <10>;
             then-layer = <3>;
         };
 
         symlock {
-            if-layers = <10>;
+            if-layers = <11>;
             then-layer = <3>;
         };
     };
@@ -145,13 +145,13 @@
 &kp Q        &kp W        &kp F         &kp P         &kp G           &kp J        &kp L         &kp U         &kp Y        &kp SINGLE_QUOTE
 &hrm LALT A  &hrm LGUI R  &hrm LCTRL S  &hrm LSHFT T  &kp D           &kp H        &hrm LSHFT N  &hrm LCTRL E  &hrm LGUI I  &hrm LALT O
 &kp Z        &kp X        &kp C         &kp V         &kp B           &kp K        &kp M         &kp COMMA     &kp DOT      &kp FSLH
-                                        &lt 9 RET     &lt_bksp 7 0    &lt 5 SPACE  &sh_cw
+                                        &lt 10 RET    &lt_bksp 8 0    &lt 6 SPACE  &sh_cw
             >;
         };
 
         nav {
             bindings = <
-&kp PG_UP  &kp HOME   &kp UP     &kp END         &kp LC(LS(TAB))    &enter_pw    &none           &tog 6     &bootloader  &sys_reset
+&kp PG_UP  &kp HOME   &kp UP     &kp END         &kp LC(LS(TAB))    &enter_pw    &none           &tog 7     &bootloader  &sys_reset
 &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT       &kp LC(TAB)        &key_repeat  &sk LSHFT       &sk LCTRL  &sk LGUI     &sk LALT
 &kp LC(Z)  &kp LC(X)  &kp LC(C)  &paste 0 LC(V)  &kp LC(A)          &kp LC(A)    &paste 0 LC(V)  &kp LC(C)  &kp LC(X)    &kp LC(Z)
                                  &kp TAB         &kp ESC            &none        &none
@@ -160,7 +160,7 @@
 
         num {
             bindings = <
-&sys_reset  &bootloader  &tog 8     &none           &none        &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
+&sys_reset  &bootloader  &tog 9     &none           &none        &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
 &sk LALT    &sk LGUI     &sk LCTRL  &sk LSHFT       &kp BSLH     &kp MINUS  &kp N4   &kp N5  &kp N6  &kp SEMI
 &kp LC(Z)   &kp LC(X)    &kp LC(C)  &paste 0 LC(V)  &kp LC(A)    &kp EQUAL  &kp N1   &kp N2  &kp N3  &kp GRAVE
                                     &none           &none        &kp N0     &kp DOT
@@ -169,7 +169,7 @@
 
         sym {
             bindings = <
-&sys_reset  &bootloader  &tog 10    &none           &none        &kp LBRC   &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC
+&sys_reset  &bootloader  &tog 11    &none           &none        &kp LBRC   &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC
 &sk LALT    &sk LGUI     &sk LCTRL  &sk LSHFT       &kp PIPE     &kp UNDER  &kp DLLR  &kp PRCNT  &kp CARET  &kp COLON
 &kp LC(Z)   &kp LC(X)    &kp LC(C)  &paste 0 LC(V)  &kp LC(A)    &kp PLUS   &kp EXCL  &kp AT     &kp HASH   &kp TILDE
                                     &none           &none        &kp LPAR   &kp RPAR
@@ -182,6 +182,15 @@
 &kp LALT      &kp LGUI      &kp LCTRL     &kp LSHFT     &out OUT_BLE    &none  &kp F4  &kp F5  &kp F6  &kp F11
 &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR      &none  &kp F1  &kp F2  &kp F3  &kp F12
                                           &none         &none           &none  &none
+            >;
+        };
+
+        vim {
+            bindings = <
+&none      &none      &none      &none           &none        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &to 0
+&kp LALT   &kp LGUI   &kp LCTRL  &kp LSHFT       &none        &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &paste 0 LC(V)  &kp LC(A)    &none     &kp RET    &kp TAB    &kp ESC    &kp DEL
+                                 &none           &none        &none     &none
             >;
         };
 
