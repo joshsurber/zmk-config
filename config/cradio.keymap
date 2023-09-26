@@ -21,6 +21,7 @@
                 <&kp>;
 
             global-quick-tap;
+            quick-tap-ms = <200>;
         };
         sh_cw: shift_caps_word {
             compatible = "zmk,behavior-tap-dance";
