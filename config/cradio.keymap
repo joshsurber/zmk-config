@@ -109,9 +109,14 @@
         compatible = "zmk,combos";
 
         fun_pscrn {
-            bindings = <&lt 4 PSCRN>;
+            bindings = <&lt 5 PSCRN>;
             key-positions = <30 31>;
             layers = <0>;
+        };
+
+        media {
+            bindings = <&lt 2 C_PLAY>;
+            key-positions = <33 32>;
         };
     };
 
@@ -156,22 +161,31 @@
 &kp Q        &kp W        &kp F         &kp P         &kp G           &kp J        &kp L         &kp U         &kp Y        &kp SINGLE_QUOTE
 &hrm LALT A  &hrm LGUI R  &hrm LCTRL S  &hrm LSHFT T  &kp D           &kp H        &hrm LSHFT N  &hrm LCTRL E  &hrm LGUI I  &hrm LALT O
 &kp Z        &kp X        &kp C         &kp V         &kp B           &kp K        &kp M         &kp COMMA     &kp DOT      &kp FSLH
-                                        &lt 3 RET     &lt_bksp 2 0    &lt 1 SPACE  &sh_cw
+                                        &lt 4 RET     &lt_bksp 3 0    &lt 1 SPACE  &sh_cw
             >;
         };
 
         nav {
             bindings = <
-&kp PG_UP  &kp HOME      &kp UP         &kp END         &kp LC(LS(TAB))    &pw1         &none           &to 5          &bootloader   &sys_reset
+&kp PG_UP  &kp HOME      &kp UP         &kp END         &kp LC(LS(TAB))    &pw1         &mo 2           &to 6          &bootloader   &sys_reset
 &kp PG_DN  &kp LEFT      &kp DOWN       &kp RIGHT       &kp LC(TAB)        &key_repeat  &sk LSHFT       &sk LCTRL      &sk LGUI      &sk LALT
 &kp LC(Z)  &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)          &kp LC(A)    &paste 0 LC(V)  &copy 0 LC(C)  &cut 0 LC(X)  &kp LC(Z)
                                         &kp TAB         &kp ESC            &none        &none
             >;
         };
 
+        media {
+            bindings = <
+&none  &none       &kp C_VOL_UP  &none       &none               &none  &none  &none  &none  &none
+&none  &kp C_PREV  &kp C_VOL_DN  &kp C_NEXT  &none               &none  &none  &none  &none  &none
+&none  &none       &none         &none       &none               &none  &none  &none  &none  &none
+                                 &kp C_STOP  &kp C_PLAY_PAUSE    &none  &none
+            >;
+        };
+
         num {
             bindings = <
-&sys_reset  &bootloader   &mo 6          &none           &pw2         &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
+&sys_reset  &bootloader   &mo 7          &none           &pw2         &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
 &sk LALT    &sk LGUI      &sk LCTRL      &sk LSHFT       &kp BSLH     &kp MINUS  &kp N4   &kp N5  &kp N6  &kp SEMI
 &kp LC(Z)   &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)    &kp EQUAL  &kp N1   &kp N2  &kp N3  &kp GRAVE
                                          &none           &none        &kp N0     &kp DOT
@@ -189,10 +203,10 @@
 
         fun {
             bindings = <
-&sys_reset  &none         &none          &none           &none        &none  &kp F7  &kp F8  &kp F9  &kp F10
-&kp LALT    &kp LGUI      &kp LCTRL      &kp LSHFT       &none        &none  &kp F4  &kp F5  &kp F6  &kp F11
-&kp LC(Z)   &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)    &none  &kp F1  &kp F2  &kp F3  &kp F12
-                                         &none           &none        &none  &none
+&sys_reset  &none         &none          &none           &none        &kp PSCRN  &kp F7  &kp F8  &kp F9  &kp F10
+&kp LALT    &kp LGUI      &kp LCTRL      &kp LSHFT       &none        &none      &kp F4  &kp F5  &kp F6  &kp F11
+&kp LC(Z)   &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)    &none      &kp F1  &kp F2  &kp F3  &kp F12
+                                         &none           &none        &none      &none
             >;
         };
 
