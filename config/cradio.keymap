@@ -166,7 +166,7 @@
 
         nav {
             bindings = <
-&kp PG_UP  &kp HOME      &kp UP         &kp END         &ht LS(LA(TAB)) LS(LC(TAB))    &pw1         &mo 2           &to 6          &bootloader   &sys_reset
+&kp PG_UP  &kp HOME      &kp UP         &kp END         &ht LS(LA(TAB)) LS(LC(TAB))    &pw1         &none           &to 6          &bootloader   &sys_reset
 &kp PG_DN  &kp LEFT      &kp DOWN       &kp RIGHT       &ht LA(TAB) LC(TAB)            &key_repeat  &sk LSHFT       &sk LCTRL      &sk LGUI      &sk LALT
 &kp LC(Z)  &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)                      &kp LC(A)    &paste 0 LC(V)  &copy 0 LC(C)  &cut 0 LC(X)  &kp LC(Z)
                                         &kp TAB         &kp ESC                        &none        &none
@@ -175,10 +175,10 @@
 
         media {
             bindings = <
-&none  &none       &kp C_VOL_UP  &none       &none               &none  &none  &none  &none  &none
-&none  &kp C_PREV  &kp C_VOL_DN  &kp C_NEXT  &none               &none  &none  &none  &none  &none
-&none  &none       &none         &none       &none               &none  &none  &none  &none  &none
-                                 &kp C_STOP  &kp C_PLAY_PAUSE    &none  &none
+&none         &none         &kp C_VOL_UP  &none         &out OUT_USB        &none      &none           &none          &bootloader   &sys_reset
+&none         &kp C_PREV    &kp C_VOL_DN  &kp C_NEXT    &out OUT_BLE        &none      &sk LSHFT       &sk LCTRL      &sk LGUI      &sk LALT
+&bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR          &kp LC(A)  &paste 0 LC(V)  &copy 0 LC(C)  &cut 0 LC(X)  &kp LC(Z)
+                                          &kp C_STOP    &kp C_PLAY_PAUSE    &none      &none
             >;
         };
 
