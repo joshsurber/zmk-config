@@ -166,7 +166,7 @@
 
         nav {
             bindings = <
-&kp PG_UP  &kp HOME      &kp UP         &kp END         &ht LS(LA(TAB)) LS(LC(TAB))    &pw1         &none           &to 6          &bootloader   &sys_reset
+&kp PG_UP  &kp HOME      &kp UP         &kp END         &ht LS(LA(TAB)) LS(LC(TAB))    &pw1         &none           &none          &bootloader   &sys_reset
 &kp PG_DN  &kp LEFT      &kp DOWN       &kp RIGHT       &ht LA(TAB) LC(TAB)            &key_repeat  &sk LSHFT       &sk LCTRL      &sk LGUI      &sk LALT
 &kp LC(Z)  &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)                      &kp LC(A)    &paste 0 LC(V)  &copy 0 LC(C)  &cut 0 LC(X)  &kp LC(Z)
                                         &kp TAB         &kp ESC                        &kp DOWN     &kp UP
@@ -184,7 +184,7 @@
 
         num {
             bindings = <
-&sys_reset  &bootloader   &mo 7          &none           &pw2         &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
+&sys_reset  &bootloader   &none          &none           &pw2         &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
 &sk LALT    &sk LGUI      &sk LCTRL      &sk LSHFT       &kp BSLH     &kp MINUS  &kp N4   &kp N5  &kp N6  &kp SEMI
 &kp LC(Z)   &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)    &kp EQUAL  &kp N1   &kp N2  &kp N3  &kp GRAVE
                                          &kp LEFT        &kp RIGHT    &kp N0     &kp DOT
@@ -206,24 +206,6 @@
 &kp LALT    &kp LGUI      &kp LCTRL      &kp LSHFT       &none        &none      &kp F4  &kp F5  &kp F6  &kp F11
 &kp LC(Z)   &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)    &none      &kp F1  &kp F2  &kp F3  &kp F12
                                          &none           &none        &none      &none
-            >;
-        };
-
-        vim {
-            bindings = <
-&none      &none         &none          &none           &none        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &to 0
-&kp LALT   &kp LGUI      &kp LCTRL      &kp LSHFT       &none        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
-&kp LC(Z)  &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)    &to 0      &kp RET    &kp TAB    &kp ESC    &kp DEL
-                                        &none           &none        &kp SPACE  &to 0
-            >;
-        };
-
-        bt {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans    &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
-&trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans        &trans
-                        &trans  &trans    &out OUT_BLE  &out OUT_USB
             >;
         };
     };
