@@ -95,7 +95,7 @@
         };
 
         HJKL {
-            bindings = <&mo 6>;
+            bindings = <&tog 6>;
             key-positions = <10 13 10 11 12 13>;
         };
     };
@@ -192,9 +192,9 @@
 
         HJKL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &kp E   &kp I   &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans    &kp H   &kp J   &kp K   &kp L   &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &kp N   &trans  &trans  &trans  &trans
                         &trans  &trans    &trans  &trans
             >;
         };
