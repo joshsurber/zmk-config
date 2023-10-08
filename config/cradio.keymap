@@ -93,6 +93,11 @@
             bindings = <&kp DEL>;
             key-positions = <30 33>;
         };
+
+        HJKL {
+            bindings = <&mo 6>;
+            key-positions = <10 13 10 11 12 13>;
+        };
     };
 
     macros {
@@ -182,6 +187,15 @@
 &kp LALT    &kp LGUI      &kp LCTRL      &kp LSHFT       &none        &kp CAPS   &kp F4  &kp F5  &kp F6  &kp F11
 &kp LC(Z)   &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)    &none      &kp F1  &kp F2  &kp F3  &kp F12
                                          &none           &none        &none      &none
+            >;
+        };
+
+        HJKL {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &kp H   &kp J   &kp K   &kp L   &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
     };
