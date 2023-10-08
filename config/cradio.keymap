@@ -97,6 +97,7 @@
         HJKL {
             bindings = <&tog 6>;
             key-positions = <10 13 10 11 12 13>;
+            timeout-ms = <250>;
         };
     };
 
