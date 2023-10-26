@@ -59,6 +59,12 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+        sh_cw: shift_caps_word {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_CAPS_WORD";
+            #binding-cells = <0>;
+            bindings = <&sk LSHFT>, <&caps_word>;
+        };
     };
 
     conditional_layers {
