@@ -142,7 +142,7 @@
 &kp Q        &kp W        &kp F         &kp P            &kp G    &kp J        &kp L         &kp U         &kp Y        &ht DOUBLE_QUOTES APOS
 &hrm LALT A  &hrm LGUI R  &hrm LCTRL S  &hrm LSHFT T     &kp D    &kp H        &hrm LSHFT N  &hrm LCTRL E  &hrm LGUI I  &hrm LALT O
 &kp Z        &kp X        &kp C         &kp V            &kp B    &kp K        &kp M         &ht LT COMMA  &ht GT DOT   &ht QMARK SLASH
-                                        &lt 2 BACKSPACE  &sl 1    &lt 3 SPACE  &sh_cw
+                                        &lt 3 BACKSPACE  &sl 1    &lt 2 SPACE  &sh_cw
             >;
         };
 
@@ -157,7 +157,7 @@
 
         nav {
             bindings = <
-&kp PG_UP  &kp HOME      &kp UP         &kp END         &ht LS(LA(TAB)) LS(LC(TAB))    &pw1         &none           &none          &bootloader   &sys_reset
+&kp PG_UP  &kp HOME      &kp UP         &kp END         &ht LS(LA(TAB)) LS(LC(TAB))    &pw1         &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_CLR    &out OUT_TOG
 &kp PG_DN  &kp LEFT      &kp DOWN       &kp RIGHT       &ht LA(TAB) LC(TAB)            &key_repeat  &sk LSHFT       &sk LCTRL      &sk LGUI      &sk LALT
 &kp LC(Z)  &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)                      &kp LC(A)    &paste 0 LC(V)  &copy 0 LC(C)  &cut 0 LC(X)  &kp LC(Z)
                                         &kp TAB         &kp ESC                        &kp DOWN     &kp UP
