@@ -141,7 +141,7 @@
             bindings = <
 &kp Q        &kp W        &kp F         &kp P            &kp G    &kp J        &kp L         &kp U         &kp Y        &ht DOUBLE_QUOTES APOS
 &hrm LALT A  &hrm LGUI R  &hrm LCTRL S  &hrm LSHFT T     &kp D    &kp H        &hrm LSHFT N  &hrm LCTRL E  &hrm LGUI I  &hrm LALT O
-&kp Z        &kp X        &kp C         &kp V            &kp B    &kp K        &kp M         &ht LT COMMA  &ht GT DOT   &ht QMARK SLASH
+&ht LC(Z) Z  &ht LC(X) X  &ht LC(C) C   &ht LC(V) V      &kp B    &kp K        &kp M         &ht LT COMMA  &ht GT DOT   &ht QMARK SLASH
                                         &lt 3 BACKSPACE  &sl 1    &lt 2 SPACE  &sh_cw
             >;
         };
@@ -151,7 +151,7 @@
 &kp EXCL         &kp AT           &kp POUND        &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS          &kp STAR        &kp UNDER      &kp PIPE
 &hrm LALT GRAVE  &hrm LGUI TILDE  &hrm LCTRL LBRC  &hrm LSHFT LPAR  &kp LBKT     &kp SEMI   &hrm LSHFT ENTER  &hrm LCTRL TAB  &hrm LGUI ESC  &hrm LALT BSPC
 &kp LT           &kp GT           &kp RBRC         &kp RPAR         &kp RBKT     &kp PLUS   &kp MINUS         &kp EQUAL       &kp COLON      &kp BSLH
-                                                   &kp LEFT         &kp DOWN     &kp UP     &kp RIGHT
+                                                   &trans           &trans       &to 0      &trans
             >;
         };
 
@@ -160,16 +160,16 @@
 &kp PG_UP  &kp HOME      &kp UP         &kp END         &ht LS(LA(TAB)) LS(LC(TAB))    &pw1         &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_CLR    &out OUT_TOG
 &kp PG_DN  &kp LEFT      &kp DOWN       &kp RIGHT       &ht LA(TAB) LC(TAB)            &key_repeat  &sk LSHFT       &sk LCTRL      &sk LGUI      &sk LALT
 &kp LC(Z)  &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)                      &kp LC(A)    &paste 0 LC(V)  &copy 0 LC(C)  &cut 0 LC(X)  &kp LC(Z)
-                                        &kp LEFT        &kp DOWN                       &kp UP       &kp RIGHT
+                                        &trans          &trans                         &to 0        &trans
             >;
         };
 
         num {
             bindings = <
-&kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP   &kp C_NEXT      &pw2         &pw1       &kp N7     &kp N8  &kp N9  &kp BSPC
-&sk LALT    &sk LGUI      &sk LCTRL      &sk LSHFT       &none        &kp ENTER  &kp N4     &kp N5  &kp N6  &kp N0
-&kp LC(Z)   &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)    &kp TAB    &kp N1     &kp N2  &kp N3  &kp DOT
-                                         &kp LEFT        &kp DOWN     &kp UP     &kp RIGHT
+&kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP   &kp C_NEXT      &pw2         &pw1       &kp N7  &kp N8  &kp N9  &kp BSPC
+&sk LALT    &sk LGUI      &sk LCTRL      &sk LSHFT       &none        &kp ENTER  &kp N4  &kp N5  &kp N6  &kp N0
+&kp LC(Z)   &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)    &kp TAB    &kp N1  &kp N2  &kp N3  &kp DOT
+                                         &trans          &trans       &to 0      &kp N0
             >;
         };
     };
