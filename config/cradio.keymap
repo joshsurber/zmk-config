@@ -148,10 +148,10 @@
 
         OSL {
             bindings = <
-&kp EXCL         &kp AT           &kp POUND        &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS          &kp STAR        &kp UNDER      &kp PIPE
-&hrm LALT GRAVE  &hrm LGUI TILDE  &hrm LCTRL LBRC  &hrm LSHFT LPAR  &kp LBKT     &kp SEMI   &hrm LSHFT ENTER  &hrm LCTRL TAB  &hrm LGUI ESC  &hrm LALT BSPC
-&kp LT           &kp GT           &kp RBRC         &kp RPAR         &kp RBKT     &kp PLUS   &kp MINUS         &kp EQUAL       &kp COLON      &kp BSLH
-                                                   &kp RET          &trans       &to 0      &kp TAB
+&kp EXCL  &kp AT    &kp POUND  &kp DLLR   &kp PRCNT          &kp CARET  &kp AMPS          &kp STAR        &ht UNDER MINUS  &ht PLUS EQUAL
+&sk LALT  &sk LGUI  &sk LCTRL  &sk LSHFT  &ht TILDE GRAVE    &kp SEMI   &hrm LSHFT ENTER  &hrm LCTRL TAB  &hrm LGUI ESC    &hrm LALT BSPC
+&kp LT    &kp GT    &kp LBRC   &kp LPAR   &kp LBKT           &kp RBKT   &kp RPAR          &kp RBRC        &kp COLON        &ht PIPE BACKSLASH
+                               &kp RET    &trans             &to 0      &kp TAB
             >;
         };
 
