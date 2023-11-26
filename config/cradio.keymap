@@ -21,6 +21,7 @@
             global-quick-tap;
             quick-tap-ms = <200>;
         };
+
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP";
@@ -32,6 +33,7 @@
             global-quick-tap;
             flavor = "tap-preferred";
         };
+
         paste: paste {
             compatible = "zmk,behavior-hold-tap";
             label = "PASTE";
@@ -41,6 +43,7 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
         copy: copy {
             compatible = "zmk,behavior-hold-tap";
             label = "COPY";
@@ -50,6 +53,7 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
         cut: cut {
             compatible = "zmk,behavior-hold-tap";
             label = "CUT";
@@ -59,6 +63,7 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
         sh_cw: shift_caps_word {
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFT_CAPS_WORD";
@@ -106,31 +111,35 @@
             compatible = "zmk,behavior-macro";
             label = "PW1";
             #binding-cells = <0>;
-            bindings = <&kp LS(A) &kp U &kp T &kp U &kp M &kp N &kp SPACE &kp SQT &kp N2 &kp N3 &kp RET>;
+            bindings = <&kp N5 &kp I &kp G &kp N &kp DOT &kp A &kp L &kp L &kp DOT &kp H &kp O &kp M &kp E &kp W &kp O &kp R &kp K &kp DOT &kp S &kp P &kp L &kp E &kp N &kp D &kp I &kp D &kp RET>;
         };
+
         paste_enter: paste_enter {
             compatible = "zmk,behavior-macro";
             label = "PASTE_ENTER";
             #binding-cells = <0>;
             bindings = <&kp LC(V) &kp RET>;
         };
+
         sel_cut: sel_cut {
             compatible = "zmk,behavior-macro";
             label = "SEL_CUT";
             #binding-cells = <0>;
             bindings = <&kp LC(A) &kp LC(X)>;
         };
+
         sel_copy: sel_copy {
             compatible = "zmk,behavior-macro";
             label = "SEL_COPY";
             #binding-cells = <0>;
             bindings = <&kp LC(A) &kp LC(C)>;
         };
+
         pw2: pw2 {
             compatible = "zmk,behavior-macro";
             label = "PW2";
             #binding-cells = <0>;
-            bindings = <&kp N5 &kp I &kp G &kp N &kp DOT &kp A &kp L &kp L &kp DOT &kp H &kp O &kp M &kp E &kp W &kp O &kp R &kp K &kp DOT &kp S &kp P &kp L &kp E &kp N &kp D &kp I &kp D>;
+            bindings = <&kp LS(A) &kp U &kp T &kp U &kp M &kp N &kp SPACE &kp SQT &kp N2 &kp N3>;
         };
     };
 
@@ -142,16 +151,16 @@
 &kp Q        &kp W        &kp F         &kp P         &kp G              &kp J        &kp L         &kp U         &kp Y        &ht DOUBLE_QUOTES APOS
 &hrm LALT A  &hrm LGUI R  &hrm LCTRL S  &hrm LSHFT T  &kp D              &kp H        &hrm LSHFT N  &hrm LCTRL E  &hrm LGUI I  &hrm LALT O
 &kp Z        &kp X        &kp C         &kp V         &kp B              &kp K        &kp M         &ht LT COMMA  &ht GT DOT   &ht QMARK SLASH
-                                        &lt 4 RET     &lt 3 BACKSPACE    &lt 1 SPACE  &lt 2 TAB
+                                        &lt 4 RET     &lt 3 BACKSPACE    &lt 1 SPACE  &sk LSHFT
             >;
         };
 
         nav {
             bindings = <
-&kp PG_UP  &kp HOME      &kp UP         &kp END         &ht LS(LA(TAB)) LS(LC(TAB))    &pw1         &none           &none          &bootloader   &sys_reset
-&kp PG_DN  &kp LEFT      &kp DOWN       &kp RIGHT       &ht LA(TAB) LC(TAB)            &key_repeat  &sk LSHFT       &sk LCTRL      &sk LGUI      &sk LALT
-&kp LC(Z)  &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)                      &kp LC(A)    &paste 0 LC(V)  &copy 0 LC(C)  &cut 0 LC(X)  &kp LC(Z)
-                                        &kp TAB         &kp ESC                        &kp DOWN     &kp UP
+&kp PG_UP  &kp HOME      &kp UP         &kp END         &ht LS(LA(TAB)) LS(LC(TAB))    &pw1         &none      &none      &bootloader  &kp PRINTSCREEN
+&kp PG_DN  &kp LEFT      &kp DOWN       &kp RIGHT       &ht LA(TAB) LC(TAB)            &key_repeat  &sk LSHFT  &sk LCTRL  &sk LGUI     &sk LALT
+&kp LC(Z)  &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)                      &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT    &kp LC(Z)
+                                        &kp TAB         &kp DEL                        &none        &none
             >;
         };
 
@@ -160,25 +169,25 @@
 &none         &none         &kp C_VOL_UP  &kp C_MUTE    &out OUT_USB        &none      &none           &none          &bootloader   &sys_reset
 &none         &kp C_PREV    &kp C_VOL_DN  &kp C_NEXT    &out OUT_BLE        &none      &sk LSHFT       &sk LCTRL      &sk LGUI      &sk LALT
 &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR          &kp LC(A)  &paste 0 LC(V)  &copy 0 LC(C)  &cut 0 LC(X)  &kp LC(Z)
-                                          &kp C_STOP    &kp C_PLAY_PAUSE    &kp DOWN   &kp UP
+                                          &kp C_STOP    &kp C_PLAY_PAUSE    &none      &none
             >;
         };
 
         num {
             bindings = <
-&sys_reset  &bootloader   &none          &none           &pw2         &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
-&sk LALT    &sk LGUI      &sk LCTRL      &sk LSHFT       &none        &kp MINUS  &kp N4   &kp N5  &kp N6  &kp SEMI
-&kp LC(Z)   &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)    &kp PLUS   &kp N1   &kp N2  &kp N3  &kp GRAVE
-                                         &kp LEFT        &kp RIGHT    &kp N0     &kp DOT
+&sys_reset  &bootloader   &out OUT_USB   &out OUT_BLE    &pw2         &kp LBKT   &kp N7   &kp N8  &kp N9  &kp RBKT
+&sk LALT    &sk LGUI      &sk LCTRL      &sk LSHFT       &kp BSLH     &kp MINUS  &kp N4   &kp N5  &kp N6  &kp SEMI
+&kp LC(Z)   &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)    &kp EQUAL  &kp N1   &kp N2  &kp N3  &kp GRAVE
+                                         &none           &none        &kp N0     &kp DOT
             >;
         };
 
         sym {
             bindings = <
 &sys_reset  &bootloader   &none          &none           &none        &kp LBRC   &kp AMPS  &kp STAR   &ht PIPE BSLH  &kp RBRC
-&sk LALT    &sk LGUI      &sk LCTRL      &sk LSHFT       &none        &kp UNDER  &kp DLLR  &kp PRCNT  &kp CARET      &kp COLON
-&kp LC(Z)   &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)    &kp EQUAL  &kp EXCL  &kp AT     &kp HASH       &kp TILDE
-                                         &kp LEFT        &kp RIGHT    &kp LPAR   &kp RPAR
+&sk LALT    &sk LGUI      &sk LCTRL      &sk LSHFT       &kp PIPE     &kp UNDER  &kp DLLR  &kp PRCNT  &kp CARET      &kp COLON
+&kp LC(Z)   &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)    &kp PLUS   &kp EXCL  &kp AT     &kp HASH       &kp TILDE
+                                         &none           &none        &kp LPAR   &kp RPAR
             >;
         };
 
