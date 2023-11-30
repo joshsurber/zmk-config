@@ -157,9 +157,9 @@
 
         nav {
             bindings = <
-&kp PG_UP  &kp HOME      &kp UP         &kp END         &ht LS(LA(TAB)) LS(LC(TAB))    &pw1         &kp LG(L)  &none      &bootloader  &kp PRINTSCREEN
-&kp PG_DN  &kp LEFT      &kp DOWN       &kp RIGHT       &ht LA(TAB) LC(TAB)            &key_repeat  &sk LSHFT  &sk LCTRL  &sk LGUI     &sk LALT
-&kp LC(Z)  &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)                      &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT    &kp LC(BSPC)
+&kp PG_UP  &kp HOME      &kp UP         &kp END         &ht LS(LA(TAB)) LS(LC(TAB))    &pw1         &kp LG(L)  &kp LG(X)  &kp CAPS   &kp PRINTSCREEN
+&kp PG_DN  &kp LEFT      &kp DOWN       &kp RIGHT       &ht LA(TAB) LC(TAB)            &key_repeat  &sk LSHFT  &sk LCTRL  &sk LGUI   &sk LALT
+&kp LC(Z)  &cut 0 LC(X)  &copy 0 LC(C)  &paste 0 LC(V)  &kp LC(A)                      &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &kp LC(BSPC)
                                         &kp TAB         &kp DEL                        &none        &kp ENTER
             >;
         };
